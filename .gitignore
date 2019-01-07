@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/backtrace
+backtrace.so
+backtrace.dylib
+backtrace.dll
+backtrace.a
+backtrace.lib
+backtrace-test-*
+*.exe
+*.o
+*.obj
+*.lst
