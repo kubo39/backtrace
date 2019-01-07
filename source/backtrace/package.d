@@ -122,8 +122,9 @@ void resolve(void* addr, void function(Symbol) cb)
 {
     Symbol symbol;
 
-    // Though use dladdr() here now, libbacktrace may be
-    // better choise to get lineno and filename.
+    // Though use dladdr() here now, but according to Rust's
+    // backtrace-rs, dladdr() is fairly unreliable on linux.
+    // And libbacktrace would be better choise.
     if (dladdr(addr, &symbol.info) != 0)
         cb(symbol);
 }
