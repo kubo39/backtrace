@@ -68,30 +68,32 @@ void trace(bool function(Frame) cb)
 
 struct SymbolName
 {
-    char[] mangled;
-    char[] demangled;
+private:
+    char[] _mangled;
+    char[] _demangled;
 
+public:
     this(char* ptr, size_t len)
     {
         enum SIZE = 1000; // FIXME: guess 1000 is enough, maybe optimise better..
-        mangled = new char[len];
-        memcpy(mangled.ptr, ptr, len);
-        demangled = new char[SIZE];
-        demangle(mangled, demangled);
+        _mangled = new char[len];
+        memcpy(_mangled.ptr, ptr, len);
+        _demangled = new char[SIZE];
+        demangle(_mangled, _demangled);
     }
 
     /* Returns demangled symbol.
      */
-    string demangledName()
+    string demangled() @property
     {
-        return cast(string) demangled;
+        return cast(string) _demangled;
     }
 
     /* Returns mangled(raw) symbol.
      */
-    string mangledName()
+    string mangled() @property
     {
-        return cast(string) mangled;
+        return cast(string) _mangled;
     }
 }
 
