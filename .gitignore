@@ -13,3 +13,4 @@ backtrace-test-*
 *.o
 *.obj
 *.lst
+*.a

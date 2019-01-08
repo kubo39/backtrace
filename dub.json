@@ -1,8 +1,8 @@
 {
+	"name": "backtrace",
 	"authors": [
 		"Hiroki Noda"
 	],
 	"copyright": "Copyright © 2019, Hiroki Noda",
-	"license": "BSL-1.0",
-	"name": "backtrace"
+	"license": "BSL-1.0"
 }

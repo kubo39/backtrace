@@ -1,0 +1,8 @@
+{
+	"name": "backtrace.exe",
+	"authors": ["Hiroki Noda"],
+	"license": "BSL-1.0",
+	"dependencies": {
+		"backtrace": { "version": "~master", "path": "../" }
+	}
+}
